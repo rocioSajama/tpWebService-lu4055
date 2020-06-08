@@ -1,0 +1,130 @@
+<div class="container">
+
+    <div class="row justify-content-center mt-4 mb-4">
+        <img src="../../../assets/imagenes/gif covid.gif" alt="" class="col-10 gif">
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-3">
+            <div class="card bg-dark">
+                <div class="col-md-12 p-2 mb-2 bg-info text-white unoo">
+                    Filtrar Estadisticas
+                </div>
+                <form class="col-md-12" style="color: white;">
+                    <div class="form-group">
+                        <label for="Pais">Pais</label>
+                        <select id="pais" class="form-control" name="pais" id="pais" #country >
+                            <option value="usa">Estados Unidos</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="brazil">Brazil</option>
+                            <option value="chile">Chile</option>
+                            <option value="japan">Japon</option>
+                            <option value="china">China</option>
+                            <option value="germany">Alemania</option>
+                        </select>
+                    </div>
+             
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="casosConf" (change)="changeCasos()"/> 
+                        <label class="form-check-label" for="casosConf">Casos confirmados</label>
+                    </div>
+
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="curado" (change)="changeRecuperados()"/>
+                        <label class="form-check-label" for="curado">Curados</label>
+                    </div>
+
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="fallecido" (change)="change()"/>
+                        <label class="form-check-label" for="fallecido">Fallecidos</label>
+                    </div>
+
+                    <button type="submit" class="text-black col-sm-12 btn btn-warning btn-sm mb-3" (click)="consulta(country)">Consultar</button>
+                    <button type="submit" class="text-black col-sm-12 btn btn-warning btn-sm mb-3" (click)="ngOnInit()">Mostrar todos</button>
+                </form>
+            </div>
+      </div>
+
+        <div *ngIf="filtrado == false" class="scrollable col-12 col-md-8 mb-3">
+            <table class="table table-responsive table-hover">
+              <thead>
+                <tr class="text-primary">
+                  <th style="width: 12%;">
+                    Ubicacion
+                  </th>
+                  <th style="width: 12%;">
+                    Casos Totales
+                  </th>
+                  <th style="width: 12%;">
+                    Casos Activos
+                  </th>
+                  <th style="width: 12%;">
+                    Nuevos Casos
+                  </th>
+                  <th style="width: 12%;">
+                    Nuevas Muertes
+                  </th>
+                  <th style="width: 12%;">
+                    Muertes Totales
+                  </th>
+                  <th style="width: 12%;">
+                    Recuperados
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of paises">
+                  <td>{{ item.Country_text }}</td>
+                  <td>{{ item["Total Cases_text"] }}</td>
+                  <td>{{ item["Active Cases_text"] }}</td>
+                  <td>{{ item["New Cases_text"] }}</td>
+                  <td>{{ item["New Deaths_text"] }}</td>
+                  <td>{{ item["Total Deaths_text"] }}</td>
+                  <td>{{ item["Total Recovered_text"] }}</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+
+      <div *ngIf="filtrado" class="scrollable col-12 col-md-8 mb-3">
+          <table class="table table-responsive table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 12%;">
+                            Ubicacion
+                        </th>
+                        <th *ngIf="filtradoc" style="width: 12%;">
+                            Casos Totales
+                        </th>
+                        <th *ngIf="filtradoc" style="width: 12%;">
+                            Casos Activos
+                        </th>
+                        <th *ngIf="filtradoc" style="width: 12%;">
+                            Nuevos Casos
+                        </th>
+                        <th *ngIf="filtradof" style="width: 12%;">
+                            Nuevas Muertes
+                        </th>
+                        <th *ngIf="filtradof" style="width: 12%;">
+                            Muertes Totales
+                        </th>
+                        <th *ngIf="filtrador" style="width: 12%;">
+                            Recuperados
+                        </th>
+                    </tr>
+              </thead>
+              <tbody>
+                  <td>{{ a.Country_text }}</td>
+                  <td *ngIf="filtradoc">{{ a["Total Cases_text"] }}</td>
+                  <td *ngIf="filtradoc">{{ a["Active Cases_text"] }}</td>
+                  <td *ngIf="filtradoc">{{ a["New Cases_text"] }}</td>
+                  <td *ngIf="filtradof">{{ a["New Deaths_text"] }}</td>
+                  <td *ngIf="filtradof">{{ a["Total Deaths_text"] }}</td>
+                  <td *ngIf="filtrador">{{ a["Total Recovered_text"] }}</td>
+              </tbody>
+              
+          </table>
+      </div> 
+    </div>
+</div>

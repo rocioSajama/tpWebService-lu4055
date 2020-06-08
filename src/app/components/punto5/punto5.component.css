@@ -1,0 +1,56 @@
+.contenedor{
+    background-image: url(./../../../assets/imagenes/fondobonito.jpg);
+    background-size: cover ;
+    background-position: center;
+    overflow-x: hidden;
+}
+
+.contenedor img{
+    width: 50%;
+    height: 50%;
+}
+
+.frm{
+    background-color:rgba(0, 255, 128, 0.39);
+    color: white;
+    font-family: 'Montaga', serif;
+    font-size: 15pt;
+}
+.bg{
+    background-color: rgba(0, 0, 0, 0.568);
+}
+
+#cd{
+    background-color: rgba(0, 128, 117, 0.514);
+}
+.txt-Cat{
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 50pt;
+}
+.txt{
+    color: wheat;
+    font-family: 'Lobster Two', cursive;
+    font-size: 2em;
+}
+
+h1{
+    font-family: 'Monoton', cursive;
+    color: white;
+    font-size: 10em;
+    
+}
+
+#fondo{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: rgba(0, 0, 0, 0.438);
+}
+
+.id{
+    font-family: 'Montaga', serif;
+    font-size: 13pt;
+}
+
+.inpt{
+    background-color: rgba(245, 245, 245, 0.356);
+}

@@ -1,0 +1,118 @@
+<div class="container">
+
+  <div class="row mt-5 mb-5">
+  <div class="col-md-8 " style="border: 1px solid black;"> 
+    <table class="table table-responsive">
+       <h5 id="titulo-conversor" class="m-0 p-2 bg-light"><strong class="text-center">Conversor de divisas</strong></h5> 
+      <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col"></th>
+            <th scope="col" class="text-center"><img src="../../../assets/imagenes/usa.png"> <br> USA</th>
+            <th scope="col" class="text-center"><img src="../../../assets/imagenes/uk.png"> <br> GBP</th>
+            <th scope="col" class="text-center"><img src="../../../assets/imagenes/japon.png"> <br> JPY </th>
+            <th scope="col" class="text-center"><img src="../../../assets/imagenes/china.png"> <br> CNY </th>
+            <th scope="col" class="text-center"><img src="../../../assets/imagenes/australia.png"> <br> AUD</th>
+            <th scope="col" class="text-center"><img src="../../../assets/imagenes/money.png"> <br> BTC</th>
+            <th scope="col" class="text-center"><img src="../../../assets/imagenes/arg.png"> <br> ARS</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"> <img src="../../../assets/imagenes/usa.png"></th>
+            <th scope="row" class="pl-0 hola">1   USD <br> Inverse </th>
+            <td class="text-center">1,000000 <br> 1,000000</td>
+            <td class="text-info text-center">0,811469 <br> 1,232332</td>
+            <td class="text-info text-center">108,9079 <br> 0,009182</td>
+            <td class="text-info text-center">7,057569 <br> 0,141692</td>
+            <td class="text-info text-center">1,619886 <br> 0,617328</td>
+            <td class="text-info text-center">0,000140 <br> 7.148,757</td>
+            <td class="text-info text-center">64,87725 <br> 0,015414</td>
+          </tr>
+          <tr>
+            <th scope="row"> <img src="../../../assets/imagenes/union-europea.png"></th>
+            <th scope="row" class="pl-0 hola">1   EUR <br> Inverse </th>
+            <td class="text-info text-center">1,087074 <br> 0,919901 </td>
+            <td class="text-center">0,882127 <br> 1,133623 </td>
+            <td class="text-info text-center">118,3910 <br> 0,008447</td>
+            <td class="text-info text-center">7,672100 <br> 0,130342 </td>
+            <td class="text-info text-center">1,760936 <br> 0,567880 </td>
+            <td class="text-info text-center">0,000152 <br> 6.576,146</td>
+            <td class="text-info text-center"> 70,52637 <br> 0,014179</td>
+          </tr>
+          <tr>
+            <th scope="row"> <img src="../../../assets/imagenes/uk.png"></th>
+            <th scope="row" class="pl-0">1   GBP <br> Inverse </th>
+            <td class="text-info text-center">1,232332 <br> 0,811469</td>
+            <td class="text-info text-center">1,000000 <br> 1,000000</td>
+            <td class="text-center">134,2108 <br> 0,007451</td>
+            <td class="text-info text-center">8,697272 <br> 0,114979</td>
+            <td class="text-info text-center">1,996238 <br> 0,500942</td>
+            <td class="text-info text-center">0.000172 <br> 5.800,997</td>
+            <td class="text-info text-center">79,95034 <br> 0,012508</td>
+          </tr>
+          <tr>
+            <th scope="row"> <img src="../../../assets/imagenes/rusia.png"></th>
+            <th scope="row" class="pl-0">1   RUB <br> Inverse </th>
+            <td class="text-info text-center">0,013226 <br> 75,61134</td>
+            <td class="text-info text-center">0,012166 <br> 93,17830</td>
+            <td class="text-info text-center">1,440365 <br> 0,694268</td>
+            <td class="text-info text-center"> 0,093340 <br> 10,71351</td>
+            <td class="text-info text-center">0,021424 <br> 46,67696</td>
+            <td class="text-info text-center">0,000002 <br> 540.527,1</td>
+            <td class="text-info text-center">0,858036 <br> 1,165452</td>
+          </tr>
+          <tr>
+            
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+  <div class="col-md-4 form-divisas p-3">
+  <form>
+    <h4 class=" text-white font-weight-light text-center font-weight-bold">Conversor de divisas</h4> <hr>
+    <div class="form-group">
+      <label for="cantidad" class="text-white font-weight-bold">Cantidad</label>
+      <input type="number" class="form-control text-right" name="amount" placeholder="cantidad" #amount>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1" class="text-white font-weight-bold">De:</label>
+      <select class="form-control" name="from" id="from" [(ngModel)]="from">
+        <option value="ARS">Peso Argentino</option>
+        <option value="AUD">Dolar Australiano </option>
+        <option value="GBP">Libra Esterlina UK</option>
+        <option value="BYR">Rublo ruso</option>
+        <option value="BRL">Real brasileño</option>
+        <option value="CLP">Peso Chileno</option>
+        <option value="CNY">Yuan Chino</option>
+        <option value="JPY">Yen Japonés</option>
+        <option value="USD">US Dollar</option>
+        <option value="BTC">Bitcoin</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1" class="text-white font-weight-bold">A:</label>
+      <select class="form-control" name="to" id="to" [(ngModel)]="to">
+        <option value="ARS">Peso Argentino</option>
+        <option value="AUD">Dolar Australiano </option>
+        <option value="GBP">Libra Esterlina UK</option>
+        <option value="BYR">Rublo ruso</option>
+        <option value="BRL">Real brasileño</option>
+        <option value="CLP">Peso Chileno</option>
+        <option value="CNY">Yuan Chino</option>
+        <option value="JPY">Yen Japonés</option>
+        <option value="USD">US Dollar</option>
+        <option value="BTC">Bitcoin</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="border border-light p-3 w-100 text-center">$ {{a.result}}</label>
+    </div>
+  </form>
+  <button class="btn btn-warning convertir w-100" (click)="convertirMoneda(from,to,amount)">Convertir <i class="far fa-arrow-alt-circle-right"></i></button>
+  </div>
+
+
+</div>

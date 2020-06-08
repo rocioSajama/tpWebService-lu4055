@@ -1,0 +1,13 @@
+#form-covid{
+    background: linear-gradient(rgba(46, 165, 86, 0.733) 0%, rgba(36, 182, 150, 0.733) 100%);
+}
+
+.scrollable{
+    overflow: scroll;
+    height: 20em;
+    overflow-x: unset;
+}
+
+#gif{
+    max-height: 70%;
+}

@@ -1,0 +1,25 @@
+<header class="bg-dark">
+  <div class="row justify-content-center">
+    <nav class="navbar navbar-expand-lg navbar navbar-dark rounded-bottom font-italic p-2 pl-5" >
+      <a class="navbar-brand" href="#">
+        <img src="/docs/4.5/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="" loading="lazy">
+      </a>
+        <a class="navbar-brand" [routerLink]="['/punto2']" routerLinkActive="router-link-active">
+          <img src="./../../../assets/imagenes/news.png" width="50" height="50" alt="" loading="lazy" > Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" [routerLink]="['/punto1']" routerLinkActive="router-link-active" > <i class="fas fa-dollar-sign"></i> Cotizacion de divisas</a>
+            <a class="nav-item nav-link" [routerLink]="['/punto3']" routerLinkActive="router-link-active" >Horsocopo</a>
+            <a class="nav-item nav-link" [routerLink]="['/punto4']" routerLinkActive="router-link-active" > <i class="fas fa-viruses"></i> Estadisticas Covid</a>
+            
+            <a class="nav-item nav-link" [routerLink]="['/punto5']" routerLinkActive="router-link-active" > <i class="fas fa-cocktail"></i> Cocteles</a>
+          </div>
+        </div>
+  </nav>
+  </div>
+  
+</header>
+  

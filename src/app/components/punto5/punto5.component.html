@@ -1,0 +1,54 @@
+<div class="contenedor p-5">
+
+  <div class="row justify-content-center" id="fondo">
+    <h1 class="col-5">Cheers!</h1>
+  </div>
+  
+
+  <div class="col-12 alert alert-warning" role="alert">
+    <h3 class="text-center">Aqui podras buscar tus cocteles favoritos de acuerdo a su categoria</h3> 
+  </div>
+
+  <div class="row bg p-4">
+      <img src="./../../../assets/imagenes/todo.png" class="col-4 h-10 mb-3" >
+      <img src="./../../../assets/imagenes/cerveza.png" class="col-4 h-70 mb-3">
+      <img src="./../../../assets/imagenes/shot.png" class="col-4 h-70 mb-5">
+      <img src="./../../../assets/imagenes/cocteles.png" class="col-4 h-70">
+      <img src="./../../../assets/imagenes/gaseosa.png" class="col-4 h-70">
+      <img src="./../../../assets/imagenes/licores.png" class="col-4 h-70 my-auto">
+  </div>
+
+  <form class="row justify-content-center">
+    <div class="form-group">
+      <label for="categoria" class="text-white txt-Cat">Categoria</label>
+      <input type="text" class="form-control col-10" id="categoria" name="categoria" [(ngModel)]="categoria">
+      <label><small id="passwordHelpInline" class="text-muted">ordinary_drink , beer , shot , cocktail , Homemade Liqueur , Soda</small></label>
+    </div>
+  </form>
+  <div class="form-group row justify-content-center">
+    <button type="button" class="btn btn-dark col-4 col-md-2" (click)="mostrarCocteles()"> Mostrar</button> 
+  </div>
+    
+  
+
+
+  <div class="row justify-content-center">
+    <div class="col-10 col-md-3 m-3" *ngFor="let item of cocteles">
+      <div class="card pl-5 pt-5 txt" id="cd">
+        <img src="{{item.strDrinkThumb}}" class="card-img-top h-70" alt="">
+        <div class="card-body pt-0 pl-0">
+            <h3 class="tit-card"><span>Nombre de la bebida:</span></h3>
+          <p class="card-text px-2">{{item.strDrink}}</p>
+          <!--<p class="id">Queres saber que ingredientes lleva? Copia este id <i class="fas fa-arrow-circle-right"></i> {{item.idDrink}}</p>
+          <input type="text" name="id" id="id" class="inpt id" style="width: 60%;" #id>
+          <button type="button" class="btn btn-info id" (click)="mostrarIngredientes(id)">Mostrar</button>
+          <div *ngFor="let items of ingredientes">
+            <p>{{items.strIngredient1}}</p>
+          </div>-->
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+</div>

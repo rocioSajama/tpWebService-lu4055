@@ -1,0 +1,32 @@
+#gral{
+    background-image: url(../../../assets/imagenes/fondoH.jpg);
+}
+
+.p{
+    font-family: 'Lobster Two', cursive;
+    font-size: x-large;
+}
+.txt{
+    font-family: 'Montaga', serif;
+    font-size: 15pt;
+}
+.titulo-horoscopo{
+    background: burlywood;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Bentham', serif;
+}
+
+.txt-body-card{
+    font-family: 'Bentham', serif;
+    font-size: 15pt;
+}
+
+#img-horoscopo{
+    width: 10em;
+    height: 10em;
+}
+
+#frmHoroscopo{
+    background-color: rgba(0, 0, 0, 0.315);
+}
